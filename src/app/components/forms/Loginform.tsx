@@ -59,7 +59,7 @@ export default function LoginForm() {
             toast.success('Welcome Back',{
                     position:'top-center'
                   }) 
-                  router.push(res?.url||'/')
+                  router.push('/')
                    
         }
         else{
