@@ -21,7 +21,7 @@ export default async function Notes() {
        return (
         <ScrollArea className="h-[80vh] w-full rounded-md border p-4">
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-        {notes.length>0?  notes.map((note) => (
+        {notes?.length>0?  notes.map((note) => (
             <Card key={note._id} className="hover:shadow-xl transition-shadow duration-200">
               <CardHeader>
                 <CardTitle className="truncate">{note.title}</CardTitle>
