@@ -52,14 +52,14 @@ export default function LoginForm() {
         //    }
             
         //  }
-        const res = await signIn('credentials',{...values,redirect:true, callbackUrl:'/'})
+        const res = await signIn('credentials',{...values,redirect:false, callbackUrl:'/'})
         console.log('res',res)
         
-        if(res?.ok===true){
+        if(res?.ok){
             toast.success('Welcome Back',{
                     position:'top-center'
                   }) 
-                  // router.push(res?.url||'/')
+                  router.push(res?.url||'/')
                    
         }
         else{
